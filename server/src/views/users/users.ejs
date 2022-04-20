@@ -1,0 +1,25 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+<div class="container">
+    <%chunk.forEach((users)=>{ %>
+    <div class="row mt-3" >
+        <%users.forEach((user)=>{ %>
+      <div class="col-sm-6 col-md-4">
+            <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><%= user.first_name +' '+user.last_name?? "" %></h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text"><%= user.created_at?.toLocaleString() %></p>
+                  <a href="<%= '/users/user/'+user.id %>" class="btn btn-primary">SHow Details</a>
+                </div>
+            </div>
+        </div>
+        <%}); %>
+    </div>
+    <%}); %>
+     
+</div>
+<%- include('../partials/footer') -%>
