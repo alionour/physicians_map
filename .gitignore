@@ -44,3 +44,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+.gitsecret/keys/random_seed
+/android/app/src/main/AndroidManifest.xml
